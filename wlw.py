@@ -12,14 +12,16 @@ def get_argparser():
     """Builds and returns a suitable argparser"""
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('-f', '--file', nargs=1, type=str,
-                        help='a file to read sentences from')
+                        help='Read info from file')
     parser.add_argument('-l', '--line', nargs='+', type=str,
-                        help='a sentence to read')
-    parser.add_argument('-q', '--question', nargs='+', type=str,
-                        help='a question to ask: "Who likes X", "Whom loves X",\
-                        "X hates" or simply "X"')
+                        help='Read info from promted sentence')
     parser.add_argument('-d', '--describe', action='store_true',
-                        help='describe all people')
+                        help='Get list of all people program\
+                              knows something about')
+    parser.add_argument('-q', '--question', nargs='+', type=str,
+                        help='Ask a program abouta certain person\
+                              in form `Who likes X`, `Whom loves X`,\
+                              `X hates` or simply `X`')
     parser.add_argument('-e', '--exit', action='store_true',
                         help='exit the program')
     return parser
