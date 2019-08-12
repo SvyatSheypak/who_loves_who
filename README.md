@@ -15,7 +15,7 @@ python3 wlw.py
 ```python
 python3 wlw.py -f input.txt
 ```
-or
+  or
 ```python
 python3 wlw.py 
 -f input.txt
