@@ -1,5 +1,5 @@
 # About
-A Python script to solve a 'Who loves who' task - it obtains information from sentences like `Jim likes Larry and Jean, but hates Kim.` and then tells who loves/likes/who. It uses graph with names as verices and directed edges of three labels: 'loves', 'likes' and 'hates'. In order to be able to answer to questions like "Who likes Jim" in constant time a reverse graph is also maintained. It is allowed to person to feel several feelings to a single person, but it is not allowed to delete edges from graphs and forget peoples' attitudes.
+A Python script to solve a 'Who loves who' task - it obtains information from sentences like `Jim likes Larry and Jean, but hates Kim.` and then tells who loves/likes/who. It uses graph with names as verices and directed edges of three labels: `loves`, `likes` and `hates`. In order to be able to answer to questions like "Who likes Jim" in constant time a reverse graph is also maintained. It is allowed to person to feel several feelings to a single person, but it is not allowed to delete edges from graphs and forget peoples' attitudes.
 
 # Requirements
 Scripts requires only Python3, as it imports only standart modules such as `argparse` and `sys`.
