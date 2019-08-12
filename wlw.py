@@ -75,9 +75,9 @@ class RelationsGraph(object):
         else:
             return arr[0]
 
-        def get_list_of_people(self):
-            """Returns list of vertices"""
-            return list(self.__dict.keys())
+    def get_list_of_people(self):
+        """Returns list of vertices"""
+        return list(self.__dict.keys())
 
     def describe_persons_action(self, person, action,
                                 reverse=False, short=False):
@@ -104,7 +104,7 @@ class RelationsGraph(object):
                   objects_str]
         if short:
             lemmas = lemmas[1:]
-            output_line = ' '.join(lemmas)
+        output_line = ' '.join(lemmas)
         return output_line.strip()
 
     def describe_person(self, person, reverse=False):
@@ -213,7 +213,7 @@ def answer_question(question, graph, reverse_graph):
         elif forward == '' or backward == '':
             print(forward + backward + '.')
         else:
-            print('. '.join([forward, backward])) + '.'
+            print('. '.join([forward, backward]) + '.')
     else:
         print("The question is unclear. Try --help")
 
