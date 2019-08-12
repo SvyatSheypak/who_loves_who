@@ -21,7 +21,7 @@ python3 wlw.py
         Get list of all people program knows something about
 
 `-q, --question`
-        Ask a program about a certain person in form `Who likes X`, `Whom loves X`, `X hates` or simply `X` 
+        Ask a program about a certain person in form `Who likes X`, `Whom X loves`, `X hates` or simply `X` 
 
 `-h, --help`
         Display this help and exit
