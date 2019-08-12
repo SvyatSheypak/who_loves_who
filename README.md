@@ -12,21 +12,27 @@ python3 wlw.py
 
 # Options
 `-f, --file` 
+
         Read info from file, for example from [input.txt](https://github.com/SvyatSheypak/who_loves_who/blob/master/input.txt)
 
-`-l, --line` 
+`-l, --line`
+
         Read info from promted sentence
 
-`-d, --description` 
+`-d, --description`
+
         Get list of all people program knows something about
 
-`-q, --question` 
+`-q, --question`
+
         Ask a program about a certain person in form `Who likes X`, `Whom loves X`, `X hates` or simply `X` 
 
 `-h, --help`
+
         Display this help and exit
 
-`-e, --exit` E
+`-e, --exit`
+
         Exit program
         
 # Usage examples
