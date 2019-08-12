@@ -6,26 +6,26 @@ Scripts requires only Python3, as it imports only standart modules such as `argp
 
 # Run
 Basic run
-```python
+```
 python3 wlw.py
 ```
 
 # Options
 - `-f, --file` Read info from file, for example from [input.txt](https://github.com/SvyatSheypak/who_loves_who/blob/master/input.txt)
-```python
+```
 python3 wlw.py -f input.txt
 ```
   or
-```python
+```
 python3 wlw.py 
 -f input.txt
 ```
 - `-l, --line` Read info from promted sentence
-```python
+```
 python3 wlw.py -l Alice likes Bob
 ```
 - `-q, --question` Ask a program about a certain person
-```python
+```
 python3 wlw.py -f input.txt
 -q Kim hates
 Kim hates Jim
