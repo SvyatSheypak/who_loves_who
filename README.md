@@ -46,4 +46,6 @@ Larry loves Martin and hates Karl and Jean. Larry is liked by Jim, Bob and Kim.
 -l Alice loves Sean
 -q Sean
 Sean is loved by Alice.
+-q Mr.Bean
+No info on Mr.Bean.
 ```
