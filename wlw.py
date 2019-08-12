@@ -94,6 +94,8 @@ class RelationsGraph(object):
         Returns:
             string: verbalization of persons attitude
         """
+        if person not in self.__dict:
+            return "No information on {}".format(person)
         if action not in self.__dict[person]:
             if reverse:
                 return "No information on who {} {}".format(action, person)
@@ -192,7 +194,7 @@ def answer_question(question, graph, reverse_graph):
     lemmas = [x.strip() for x in
               question.strip().split(' ') if x.strip() != '']
     if lemmas[0].lower() == 'whom':
-        if lemmas[1] in ['likes', 'hates', 'likes']:
+        if lemmas[1] in ['loves', 'hates', 'likes']:
             action = lemmas[1]
             person = lemmas[2]
         else:
@@ -200,8 +202,12 @@ def answer_question(question, graph, reverse_graph):
             person = lemmas[1]
         print(graph.describe_persons_action(person, action))
     elif lemmas[0].lower() == 'who':
-        action = lemmas[1]
-        person = lemmas[2]
+        if lemmas[1] in ['loves', 'hates', 'likes']:
+            action = lemmas[1]
+            person = lemmas[2]
+        else:
+            action = lemmas[2]
+            person = lemmas[1]
         print(reverse_graph.describe_persons_action(person, action, True))
     elif len(lemmas) == 2:
         action = lemmas[1]
@@ -211,7 +217,7 @@ def answer_question(question, graph, reverse_graph):
         forward = graph.describe_person(lemmas[0])
         backward = reverse_graph.describe_person(lemmas[0], True)
         if len(forward) == 0 and len(backward) == 0:
-            print("No info on {}.".format(lemmas[0]))
+            print("No information on {}.".format(lemmas[0]))
         elif forward == '' or backward == '':
             print(forward + backward + '.')
         else:
