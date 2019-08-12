@@ -11,22 +11,30 @@ python3 wlw.py
 ```
 
 # Options
-- `-f, --file` Read info from file, for example from [input.txt](https://github.com/SvyatSheypak/who_loves_who/blob/master/input.txt)
+`-f, --file` 
+        Read info from file, for example from [input.txt](https://github.com/SvyatSheypak/who_loves_who/blob/master/input.txt)
+
+`-l, --line` 
+        Read info from promted sentence
+
+`-d, --description` 
+        Get list of all people program knows something about
+
+`-q, --question` 
+        Ask a program about a certain person in form `Who likes X`, `Whom loves X`, `X hates` or simply `X` 
+
+`-h, --help`
+        Display this help and exit
+
+`-e, --exit` E
+        Exit program
+        
+# Usage examples
 ```
 python3 wlw.py -f input.txt
-```
-  or
-```
-python3 wlw.py 
--f input.txt
-```
-- `-l, --line` Read info from promted sentence
-```
-python3 wlw.py -l Alice likes Bob
-```
-- `-q, --question` Ask a program about a certain person
-```
-python3 wlw.py -f input.txt
+-d
+All Subjects: Jim, Bob, Jean, Kim, Larry
+All Objects: Larry, Jean, Kim, Bob, Jim, Martin, Karl
 -q Kim hates
 Kim hates Jim
 -q Who likes Kim
@@ -35,11 +43,7 @@ Kim is liked by Bob
 Bob likes Larry and Kim
 -q Larry
 Larry loves Martin and hates Karl and Jean. Larry is liked by Jim, Bob and Kim.
+-l Alice loves Sean
+-q Sean
+Sean is loved by Alice.
 ```
-- `-d, --description` Get list of all people program knows something about
-```python
-python3 wlw.py -f input.txt -d
-All Subjects: Jim, Bob, Jean, Kim, Larry
-All Objects: Larry, Jean, Kim, Bob, Jim, Martin, Karl
-```
-- `-e, --exit` Exit program
